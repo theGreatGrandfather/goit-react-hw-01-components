@@ -1,4 +1,5 @@
 import React from 'react'
+
 import {Table} from './TransactionHistory.styled'
 import TableHead from '../TableHead/TableHead'
 import TableBody from '../TableBody/TableBody'

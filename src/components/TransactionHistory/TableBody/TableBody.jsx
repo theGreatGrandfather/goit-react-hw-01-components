@@ -1,6 +1,8 @@
 import React from 'react'
-import {Tbody, Tr, Td} from './TableBody.styled'
 import PropTypes from 'prop-types'
+
+import {Tbody, Tr, Td} from './TableBody.styled'
+
 
 const TableBody = ({transactions}) => {
   return (

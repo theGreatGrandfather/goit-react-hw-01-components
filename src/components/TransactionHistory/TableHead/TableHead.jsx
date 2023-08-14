@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Thead, Tr, Th} from './TableHead.styled'
 
 const TableHead = () => {

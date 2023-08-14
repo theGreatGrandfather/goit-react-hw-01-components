@@ -1,12 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import {List, Item, Img, Name, Online, Offline} from './FriendList.styled'
 
-const FriendList = ({friends}) => {
+import PropTypes from 'prop-types'
+
+import {FriendList, FriendListItem, Img, Name, Online, Offline} from './FriendList.styled'
+
+const Friends = ({friends}) => {
     return (
-        <List>
+        <FriendList>
             {friends.map(elem => 
-                <Item 
+                <FriendListItem 
                     key={elem.id} 
                 >
                     {elem.isOnline? <Online/>: <Offline/>}
@@ -14,9 +16,9 @@ const FriendList = ({friends}) => {
                     <Name>
                         {elem.name}
                     </Name>
-                </Item>
+                </FriendListItem>
             )}
-        </List>
+        </FriendList>
     );
 };
 
@@ -31,4 +33,4 @@ FriendList.propTypes = {
     ),
 }
 
-export default FriendList
+export default Friends

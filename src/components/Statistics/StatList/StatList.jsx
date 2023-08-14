@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import {List, Item, Label, Value} from './StatList.styled'
 
 const StatList = ({data}) => {

@@ -5,8 +5,8 @@ import {
     Description, Activitis, Label, Value
 } from './Userq.styled'
 
-const User = (props) => {
-    const { username, tag, location, avatar, stats   } = props.user;
+const User = ({ username, tag, location, avatar, stats }) => {
+
     return (
         <Container>
             <Wrapper>
@@ -33,8 +33,7 @@ const User = (props) => {
     )
 }
 
-User.propTypes = { 
-    user: PropTypes.shape({
+User.propTypes = {
         username: PropTypes.string.isRequired,
         tag: PropTypes.string.isRequired,
         location: PropTypes.string.isRequired,
@@ -44,7 +43,6 @@ User.propTypes = {
             views: PropTypes.number.isRequired,
             likes: PropTypes.number.isRequired,
         }),
-    }),
 };
 
 export default User;

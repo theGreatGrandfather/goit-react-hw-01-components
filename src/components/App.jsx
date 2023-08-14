@@ -1,19 +1,27 @@
 import React from 'react';
-import user from "../user.json"
-import User from './User/User'
-import data from "../data.json"
-import Statistics from './Statistics/Statistics'
-import friends from "../friends.json"
-import FriendList from './FriendList/FriendList'
-import TransactionHistory from './TransactionHistory/TransactionHistory/TransactionHistory'
-import transactions from "../transactions.json"
+
+import User from './User/User';
+import Statistics from './Statistics/Statistics';
+import Friends from './FriendList/FriendList';
+import TransactionHistory from './TransactionHistory/TransactionHistory/TransactionHistory';
+
+import user from "../data/user.json";
+import data from "../data/data.json";
+import friends from "../data/friends.json";
+import transactions from "../data/transactions.json";
 
 export const App = () => {
   return (
     <>
-      <User user={ user } />
+      <User
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
       <Statistics title={'Upload stats'} data={data}/>
-      <FriendList friends={friends} />
+      <Friends friends={friends} />
       <TransactionHistory transactions={transactions}/>
     </>
     
