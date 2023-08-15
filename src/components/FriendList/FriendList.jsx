@@ -1,23 +1,20 @@
 import React from 'react'
-
 import PropTypes from 'prop-types'
 
-import {FriendList, FriendListItem, Img, Name, Online, Offline} from './FriendList.styled'
+import FriendListItem from './FrendrListItem/FriendListItem';
+import { FriendList } from './FriendList.styled';
 
 const Friends = ({friends}) => {
     return (
         <FriendList>
             {friends.map(elem => 
-                <FriendListItem 
-                    key={elem.id} 
-                >
-                    {elem.isOnline? <Online/>: <Offline/>}
-                    <Img width='40' src={elem.avatar}/>
-                    <Name>
-                        {elem.name}
-                    </Name>
-                </FriendListItem>
-            )}
+                <FriendListItem
+                    key={elem.id}
+                    isOnline={elem.isOnline}
+                    name={elem.name}
+                    avatar={elem.avatar}
+                />
+            )}    
         </FriendList>
     );
 };
